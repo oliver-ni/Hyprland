@@ -90,7 +90,7 @@ in
 
       mesonFlags = builtins.concatLists [
         (lib.optional (!enableXWayland) "-Dxwayland=disabled")
-        (lib.optional legacyRenderer "-DLEGACY_RENDERER:STRING=true")
+        (lib.optional legacyRenderer "-DLEGACY_RENDERER:BOOL=true")
         (lib.optional withSystemd "-Dsystemd=enabled")
       ];
 
